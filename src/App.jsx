@@ -6,9 +6,9 @@ function App() {
   const [user, setUser] = useState('Eleng!')
   return (
     <>
-      <h1>Task List React App</h1>
+      <h1>Welcome {user}</h1>
       {user ? (
-        <ListTask user={user} />
+        <ListTask />
       ) : (
         <p>You must login to view the task lists</p>
       )}

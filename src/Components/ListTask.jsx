@@ -38,7 +38,7 @@ const ListTask = ({ user }) => {
         return (
             <>
                 <div>
-                <h3>Welcome, {user}</h3>
+                <h3>Here's what you've got to do.</h3>
 
                 <input type="text" value={newTask} placeholder='Add Task' onChange={(e) => setNewTask(e.target.value)}/>
                 <button onClick={handleNewTask}><IoIosAddCircle /> Add </button>
