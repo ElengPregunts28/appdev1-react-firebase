@@ -40,3 +40,53 @@
 .read-the-docs {
   color: #888;
 }
+
+.add-button { 
+  border: none; /* Remove borders */ 
+  color: black; /* White text */ 
+  text-align: center; /* Centered text */ 
+  text-decoration: none; /* Remove underline */ 
+  display: inline-block; /* Make the button inline */ 
+  font-size: 16px; /* Increase font size */ 
+  transition: background-color 0.3s; /* Smooth transition */ 
+} 
+
+.add-button:hover { 
+  background-color: #45a049; /* Darker green on hover */ 
+}
+
+.remove-button { 
+  border: none; /* Remove borders */ 
+  color: black; /* White text */ 
+  text-align: center; /* Centered text */ 
+  text-decoration: none; /* Remove underline */ 
+  display: inline-block; /* Make the button inline */ 
+  font-size: 16px; /* Increase font size */ 
+  transition: background-color 0.3s; /* Smooth transition */ 
+} 
+
+.remove-button:hover { 
+  background-color: red; /* Darker green on hover */ 
+}
+
+.user-input { 
+  padding: 10px; 
+  font-size: 16px; 
+  border: 2px solid #ccc; 
+  border-radius: 4px; 
+  transition: border-color 0.3s, box-shadow 0.3s; 
+} 
+
+.user-input:hover { 
+  border-color: #777; 
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.completed-task { 
+  text-decoration: line-through; 
+  color: grey; 
+} 
+  
+.pending-task { 
+  color: black; 
+}

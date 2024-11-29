@@ -40,14 +40,14 @@ const ListTask = ({ user }) => {
                 <div>
                 <h3>Here's what you've got to do.</h3>
 
-                <input type="text" value={newTask} placeholder='Add Task' onChange={(e) => setNewTask(e.target.value)}/>
-                <button onClick={handleNewTask}><IoIosAddCircle /> Add </button>
+                <input type="text" className="user-input" value={newTask} placeholder='Add Task' onChange={(e) => setNewTask(e.target.value)}/>
+                <button className="add-button" onClick={handleNewTask}><IoIosAddCircle /> Add </button>
 
                 {tasklists.map(tasklist => (
                     <li key={tasklist.id}>
                         <input type="checkbox" checked={tasklist.completed} onChange={() => handleToggleTasklist(tasklist.id)} />
-                        {tasklist.completed ? <s>{tasklist.title}</s> : tasklist.title}
-                        <button onClick={() => handleRemoveTasklist(tasklist.id)}><IoIosRemoveCircle /> Remove </button>
+                        <span className={tasklist.completed ? "completed-task" : "pending-task"}>{tasklist.title}</span>
+                        <button className="remove-button" onClick={() => handleRemoveTasklist(tasklist.id)}><IoIosRemoveCircle /> Remove </button>
                     </li>
                 ))}
                 </div>        
