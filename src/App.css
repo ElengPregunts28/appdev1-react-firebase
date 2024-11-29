@@ -42,31 +42,33 @@
 }
 
 .add-button { 
-  border: none; /* Remove borders */ 
-  color: black; /* White text */ 
-  text-align: center; /* Centered text */ 
-  text-decoration: none; /* Remove underline */ 
-  display: inline-block; /* Make the button inline */ 
-  font-size: 16px; /* Increase font size */ 
-  transition: background-color 0.3s; /* Smooth transition */ 
+  border: none; 
+  color: black;  
+  text-align: center; 
+  text-decoration: none; 
+  display: inline-block; 
+  font-size: 16px; 
+  transition: background-color 0.3s; 
+  margin: 5px;
 } 
 
 .add-button:hover { 
-  background-color: #45a049; /* Darker green on hover */ 
+  background-color: #45a049; 
 }
 
 .remove-button { 
-  border: none; /* Remove borders */ 
-  color: black; /* White text */ 
-  text-align: center; /* Centered text */ 
-  text-decoration: none; /* Remove underline */ 
-  display: inline-block; /* Make the button inline */ 
-  font-size: 16px; /* Increase font size */ 
-  transition: background-color 0.3s; /* Smooth transition */ 
+  border: none; 
+  color: black; 
+  text-align: center; 
+  text-decoration: none;  
+  display: inline-block;  
+  font-size: 16px; 
+  transition: background-color 0.3s;
+  margin: 10px;
 } 
 
 .remove-button:hover { 
-  background-color: red; /* Darker green on hover */ 
+  background-color: red; 
 }
 
 .user-input { 
@@ -74,13 +76,15 @@
   font-size: 16px; 
   border: 2px solid #ccc; 
   border-radius: 4px; 
-  transition: border-color 0.3s, box-shadow 0.3s; 
+  transition: border-color 0.3s, box-shadow 0.3s;
+  margin: 5px; 
 } 
 
 .user-input:hover { 
   border-color: #777; 
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
+
 
 .completed-task { 
   text-decoration: line-through; 

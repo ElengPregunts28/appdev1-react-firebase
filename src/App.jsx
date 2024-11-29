@@ -3,7 +3,7 @@ import './App.css'
 import ListTask from './Components/ListTask'; 
 
 function App() {
-  const [user, setUser] = useState('Eleng!')
+  const [user, setUser] = useState('User!')
   return (
     <>
       <h1>Welcome {user}</h1>
