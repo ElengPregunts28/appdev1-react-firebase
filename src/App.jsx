@@ -4,7 +4,7 @@ import { IoIosRemoveCircle } from "react-icons/io";
 import { IoIosAddCircle } from "react-icons/io";
 
 function App() {
-  const [user, setUser] = useState('Ellaine P.')
+  const [user, setUser] = useState('Maria Ellaine B. Pregunta')
   const [newTask, setNewTask] = useState('')
   const [tasklists, setTasklists] = useState([
     {
