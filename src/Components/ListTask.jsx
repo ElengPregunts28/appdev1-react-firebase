@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { IoIosRemoveCircle } from "react-icons/io";
 import { IoIosAddCircle } from "react-icons/io";
-import { db } from '../firebase.js';
+import { db } from '../Firebase.js';
 import { collection, addDoc, getDocs, updateDoc, doc, deleteDoc } from 'firebase/firestore';
-import { MdDescription } from "react-icons/md";
+import { SignOut } from "./Signout.jsx";
 
 const ListTask = ({ user }) => {
     const [loading, setLoading] = useState(true)
@@ -66,11 +66,14 @@ const ListTask = ({ user }) => {
         return (
             <>
                 <div>
+                
+                <h1>Welcome, {user.displayName || user.email}!</h1>
+
                 <h3>Here's your customizable task list.</h3>
 
                 <input type="text" className="user-input" value={newTask} placeholder='Task Name' onChange={(e) => setNewTask(e.target.value)}/> <br />
                 <input type="text" className="user-input" value={newDescription} placeholder="Description of task" onChange={(e) => setNewDescription(e.target.value)}/> <br />
-                <button className="add-button" onClick={handleNewTask}><IoIosAddCircle /> Add </button>            
+                <button className="add-button" onClick={handleNewTask}><IoIosAddCircle /> Add </button> <br />            
 
                 {tasklists.map(tasklist => (
                     <li key={tasklist.id}>
@@ -79,6 +82,7 @@ const ListTask = ({ user }) => {
                         <button className="remove-button" onClick={() => handleRemoveTasklist(tasklist.id)}><IoIosRemoveCircle /> Remove </button>
                     </li>
                 ))}
+                <SignOut />
                 </div>        
             </>
     )
