@@ -16,18 +16,18 @@ export const SignUp = () => {
             await createUserWithEmailAndPassword(authentication, email, password)
             navigate('/')
         } catch (error) {
-            setError(`Error: ${error}`)
+            setError(`${error}`)
         }
     }
 
     return (
-        <div>
+        <div className="box">
             <h1>Sign Up</h1>
-            <input type="email" placeholder="Enter your email..." onChange={(e) => setEmail(e.target.value)}/> <br />
-            <input type="password" placeholder="Enter your password..." onChange={(e) => setPassword(e.target.value)}/> <br /> 
-            <button onClick={handleSignUp}>Sign Up</button> <br />
-            {error && <p>{error}</p>}
-            <p>Already have account? <Link to = "/SignIn">Sign In</Link></p>
+            <input type="email" placeholder="Enter your email..." className="user-input" onChange={(e) => setEmail(e.target.value)}/> <br />
+            <input type="password" placeholder="Enter your password..." className="user-input" onChange={(e) => setPassword(e.target.value)}/> <br /> 
+            <button onClick={handleSignUp} className="sign-up">Sign Up</button> <br />
+            {<p>{error}</p>}
+            <p>Already have account? <Link to = "/SignIn" className="link">Sign In</Link></p>
         </div>
     )
 }

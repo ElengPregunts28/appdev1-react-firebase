@@ -65,24 +65,26 @@ const ListTask = ({ user }) => {
 
         return (
             <>
-                <div>
-                
-                <h1>Welcome, {user.displayName || user.email}!</h1>
+                <div className="box">
+                    
+                    <h1>Welcome, {user.displayName || user.email}!</h1>
 
-                <h3>Here's your customizable task list.</h3>
+                    <div className="center">
+                        <h3>Here's your customizable task list.</h3>
 
-                <input type="text" className="user-input" value={newTask} placeholder='Task Name' onChange={(e) => setNewTask(e.target.value)}/> <br />
-                <input type="text" className="user-input" value={newDescription} placeholder="Description of task" onChange={(e) => setNewDescription(e.target.value)}/> <br />
-                <button className="add-button" onClick={handleNewTask}><IoIosAddCircle /> Add </button> <br />            
+                        <input type="text" className="user-input" value={newTask} placeholder='Task Name' onChange={(e) => setNewTask(e.target.value)}/> <br />
+                        <input type="text" className="user-input" value={newDescription} placeholder="Description of task" onChange={(e) => setNewDescription(e.target.value)}/> <br />
+                        <button className="add-button" onClick={handleNewTask}><IoIosAddCircle /> Add </button> <br />            
 
-                {tasklists.map(tasklist => (
-                    <li key={tasklist.id}>
-                        <input type="checkbox" checked={tasklist.completed} onChange={() => handleToggleTasklist(tasklist.id, tasklist.completed)} />
-                        <span className={tasklist.completed ? "completed-task" : "pending-task"}>{tasklist.title} - {tasklist.description}</span>
-                        <button className="remove-button" onClick={() => handleRemoveTasklist(tasklist.id)}><IoIosRemoveCircle /> Remove </button>
-                    </li>
-                ))}
-                <SignOut />
+                        {tasklists.map(tasklist => (
+                            <li key={tasklist.id}>
+                                <input type="checkbox" checked={tasklist.completed} onChange={() => handleToggleTasklist(tasklist.id, tasklist.completed)} />
+                                <span className={tasklist.completed ? "completed-task" : "pending-task"}>{tasklist.title} - {tasklist.description}</span>
+                                <button className="remove-button" onClick={() => handleRemoveTasklist(tasklist.id)}><IoIosRemoveCircle /> Remove </button>
+                            </li>
+                        ))}
+                        <SignOut />
+                    </div>
                 </div>        
             </>
     )
